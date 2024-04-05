@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
         // Set the token as an HTTP-only cookie in the response
         const response = NextResponse.json({ success: true, message: "Successfully logged in" })
         response.cookies.set("token", token, { httpOnly: true })
-
+console.log(token)
         // Return the response with the token cookie set
         return response
     } catch (error: any) {
